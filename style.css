@@ -2,7 +2,27 @@ body {
     background-color: hsl(210, 46%, 95%);
 }
 
+#card {
+    display: flex;
+    max-width: 80%;
+    margin: auto;
+}
+
+#image {
+    width: 33%;
+    background-image: url(img/drawers.jpg);
+    background-color: rgb(122, 122, 122);
+    height: 0;
+    padding-bottom: 26.4%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
 #container {
-    max-width: 1440px;
-    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #ffffff;
+    width: calc(100% - 33%);
 }
