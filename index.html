@@ -27,12 +27,13 @@
 </head>
 
 <body>
-  <div class="card mx-auto" style="max-width: 600px;">
+  <div>
+  <div class="card mx-auto mb-4">
     <div class="row no-gutters">
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <img src="img/drawers.jpg" class="card-img" alt="Article image">
       </div>
-      <div class="col-md-8">
+      <div class="col-lg-8">
         <div class="card-body">
           <h5 class="card-title">Shift the overall look and feel by adding these wonderful
             touches to furniture in your home</h5>
@@ -42,15 +43,24 @@
         </div>
         <div class="card-footer">
           <div class="row align-items-center">
-            <div class="col-sm-2">
+            <div class="col-2">
               <img src="img/avatar-michelle.jpg" alt="Photo of Michelle" class="avatar">
             </div>
-            <div class="col-sm-8">
+            <div class="col-8">
               <span class="avatar-name">Michelle Appleton</span><br />
               <span class="date">28 Jun 2020</span>
             </div>
-            <div class="col-sm-2">
-              Share
+            <div class="col-2 justify-self-end">
+              <button type="button" class="btn share-button" onclick="togglePopup()">
+                <i class="fas fa-share"> </i>
+              </button>
+              <div id="popup" class="popup">
+                <div class="text">SHARE</div>
+                <div class="images">
+                  <i class="fab fa-facebook-square"></i> 
+                  <i class="fab fa-twitter"></i> 
+                  <i class="fab fa-pinterest"></i></div>
+              </div>
             </div>
           </div>
         </div>
@@ -60,7 +70,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by Patrizia.
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -71,6 +81,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/178d97c487.js" crossorigin="anonymous"></script>
+  <script>
+    function togglePopup() {
+      document.getElementById("popup").classList.toggle("popup-visible");
+    }
+  </script>
+  
+  </div>
 </body>
 
 </html>
