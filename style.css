@@ -2,6 +2,11 @@ html body {
     background-color: hsl(210, 46%, 95%);
 }
 
+html h5, .avatar-name {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
 html .card {
     border: 0;
     font-size: 13px;
@@ -20,7 +25,15 @@ img.card-img {
     border-bottom-right-radius: 0;
 }
 
-h5 {
-    color: hsl(217, 19%, 35%);
-    font-weight: 700;
+html .card-footer {
+    background-color: transparent;
+    border: 0;
 }
+
+img.avatar {
+    border-radius: 50%;
+    width: 50px;
+}
+ .date {
+     color: hsl(212, 23%, 69%);
+ }
