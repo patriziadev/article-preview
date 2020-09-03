@@ -2,12 +2,19 @@ html body {
     background-color: hsl(210, 46%, 95%);
 }
 
-.card {
+html .card {
     border: 0;
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    border-radius: 10px;
 }
 
 img.card-img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
