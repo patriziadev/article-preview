@@ -44,7 +44,8 @@ html .card-body {
 html .card-footer {
     background-color: transparent;
     border: 0;
-    padding: 1rem 2rem 1.5rem;
+    padding: 0.8rem 2rem 0.8rem;
+    margin-top: 1rem;
 }
 
 img.avatar {
@@ -75,7 +76,6 @@ button.share-button:hover,
 button.share-button:active,
 button.share-button:focus {
     background-color: hsl(214, 17%, 51%);
-    border: 0;
 }
 
 button.share-button:hover .fa-share,
@@ -90,12 +90,12 @@ button.share-button:focus .fa-share {
 
 .popup {
     display: none;
+    opacity: 0;
+    transition: all 0.5s ease-out ;
 }
 
-.popup-visible {
-    display: block;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+.visible {
+    opacity: 1;
     background-color: hsl(217, 19%, 35%);
     padding: 10px 20px;
     text-align: center;
@@ -103,11 +103,11 @@ button.share-button:focus .fa-share {
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: -78%;
+    left: -96%;
     display: flex;
 }
 
-.popup-visible::after {
+.visible::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -118,19 +118,30 @@ button.share-button:focus .fa-share {
     border-color: hsl(217, 19%, 35%) transparent transparent transparent;
 }
 
-#popup .images {
+#popup .images,
+.card-footer.clicked .images {
     color: #ffffff;
     display: flex;
-    font-size: 16px;
+
 }
 
 #popup .images i {
     padding: 0 5px;
+    font-size: 16px;
 }
 
-#popup .text {
+.card-footer.clicked .images i {
+    padding: 0 5px;
+}
+
+#popup .text,
+.card-footer.clicked .text {
     padding-right: 10px;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+}
+
+.card-footer .select {
+    display: none;
 }
 
 .attribution {
@@ -141,7 +152,7 @@ button.share-button:focus .fa-share {
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     html h5 {
         font-size: 1rem;
         letter-spacing: 0;
@@ -154,4 +165,22 @@ button.share-button:focus .fa-share {
         max-height: 200px;
     }
 
+    #popup {
+        display: none;
+    }
+
+    .card-footer.clicked {
+        background-color: hsl(217, 19%, 35%);
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+    }
+
+    .card-footer.clicked .select {
+        display: flex;
+        height: 50px;
+    }
+
+    .card-footer.clicked .unselect {
+        display: none;
+    }
 }
