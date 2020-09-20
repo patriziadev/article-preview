@@ -125,6 +125,17 @@ button.share-button:focus .fa-share {
 
 }
 
+#popup .images a,
+.card-footer.clicked .images a {
+    color: #ffffff;
+}
+
+#popup .images a:hover,
+.card-footer.clicked .images a:hover {
+    color: hsl(212, 23%, 69%);
+    transition: color .15s ease-in-out;
+}
+
 #popup .images i {
     padding: 0 5px;
     font-size: 16px;
